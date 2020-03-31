@@ -38,35 +38,34 @@ public class PetStoreMenuTest {
 	}
 
 	@Test
-	public void checkFunctionalLinks() throws InterruptedException {
+	public void areLinksFunctionalTest() throws InterruptedException {
 		driver.navigate().to(this.locators.getProperty("menu_url"));
 
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
-		psmp.allUrlStatusWorking();
+		sa.assertTrue(psmp.allUrlStatusWorking());
 		sa.assertAll();
 	}
 
 	@Test
-	public void checkPageNavigation() throws InterruptedException {
+	public void PageNavigationTest() throws InterruptedException {
 		driver.navigate().to(this.locators.getProperty("menu_url"));
 
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
 
-		psmp.checkQuickLinkPages("fish");
-		driver.navigate().to(this.locators.getProperty("menu_url"));
-		psmp.checkPicLinkPages("fish");
-		driver.navigate().to(this.locators.getProperty("menu_url"));
-		psmp.checkSidebarLinkPages("fish");
-		sa.assertAll();
+		Assert.assertTrue(psmp.clickOnSidebarLink("fish"));
+		driver.navigate().back();
+		Assert.assertTrue(psmp.clickOnQuickLink("fish"));
+		driver.navigate().back();
+		Assert.assertTrue(psmp.clickOnPicLInk("fish"));
 
 	}
 
 	@Test
-	public void checkSignIn() throws InterruptedException {
+	public void SignInLinkTest() throws InterruptedException {
 		driver.navigate().to(this.locators.getProperty("menu_url"));
 
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
-
+		psmp.clickSignIn();
 		Assert.assertTrue(psmp.checkSignInPage());
 	}
 

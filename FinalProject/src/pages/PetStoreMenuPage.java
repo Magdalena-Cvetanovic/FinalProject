@@ -17,10 +17,15 @@ public class PetStoreMenuPage extends BasicPage {
 		super(driver, locators, waiter);
 	}
 
+	public List<WebElement> getAllLinks() {
+		return this.driver.findElements(By.xpath("//*[@href]"));
+	}
+
 	public List<WebElement> getSidebarLinks() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("sidebar_links")));
 	}
 
+	// method for finding the link to the desired page
 	public WebElement getSidebarLink(String page) {
 		List<WebElement> links = this.getSidebarLinks();
 		WebElement link = links.get(0);
@@ -32,18 +37,6 @@ public class PetStoreMenuPage extends BasicPage {
 			}
 		}
 		return link;
-	}
-
-	public boolean checkSidebarLinkPages(String page) {
-		boolean correct = true;
-		try {
-			this.getSidebarLink(page).click();
-			String link = this.driver.findElement(By.xpath(this.locators.getProperty("element"))).getText();
-			link.compareToIgnoreCase(page);
-		} catch (Exception e) {
-			correct = false;
-		}
-		return correct;
 	}
 
 	public List<WebElement> getPicLinks() {
@@ -63,18 +56,6 @@ public class PetStoreMenuPage extends BasicPage {
 		return link;
 	}
 
-	public boolean checkPicLinkPages(String page) {
-		boolean correct = true;
-		try {
-			this.getPicLink(page).click();
-			String link = this.driver.findElement(By.xpath(this.locators.getProperty("element"))).getText();
-			link.compareToIgnoreCase(page);
-		} catch (Exception e) {
-			correct = false;
-		}
-		return correct;
-	}
-
 	public List<WebElement> getQuickLinks() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("quick_links")));
 	}
@@ -92,16 +73,12 @@ public class PetStoreMenuPage extends BasicPage {
 		return link;
 	}
 
-	public boolean checkQuickLinkPages(String page) {
-		boolean correct = true;
-		try {
-			this.getQuickLink(page).click();
-			String link = this.driver.findElement(By.xpath(this.locators.getProperty("element"))).getText();
-			link.compareToIgnoreCase(page);
-		} catch (Exception e) {
-			correct = false;
-		}
-		return correct;
+	public WebElement getPageName() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("element")));
+	}
+
+	public WebElement getLogInBtn() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("login_btn")));
 	}
 
 	public WebElement getSignIn() {
@@ -112,32 +89,52 @@ public class PetStoreMenuPage extends BasicPage {
 		this.getSignIn().click();
 	}
 
-	public boolean checkSignInPage() {
-		boolean correct = true;
-		try {
-			this.clickSignIn();
-			this.driver.findElement(By.xpath(this.locators.getProperty("login_btn")));
-		} catch (Exception e) {
-			correct = false;
-		}
-		return correct;
-	}
-
-	public List<WebElement> getAllLinks() {
-		return this.driver.findElements(By.xpath("all_links"));
-	}
-
 	public boolean allUrlStatusWorking() {
-		boolean working = true;
+		boolean working = false;
 		List<WebElement> links = this.getAllLinks();
 		int status = 0;
 		for (int i = 0; i < links.size(); i++) {
 			status = verifyURLStatus(links.get(i).getAttribute("href"));
-			if (status > 400) {
-				working = false;
+			if (status < 400) {
+				working = true;
 			}
 		}
 		return working;
+	}
+
+	// method for checking whether the link takes us to the correct page
+	public boolean clickOnSidebarLink(String page) {
+		boolean correct = false;
+		this.getSidebarLink(page).click();
+		if (this.getPageName().getText().toLowerCase().contains(page)) {
+			correct = true;
+		}
+
+		return correct;
+	}
+
+	public boolean clickOnPicLInk(String page) {
+		boolean correct = false;
+		this.getPicLink(page).click();
+		if (this.getPageName().getText().toLowerCase().contains(page)) {
+			correct = true;
+		}
+
+		return correct;
+	}
+
+	public boolean clickOnQuickLink(String page) {
+		boolean correct = false;
+		this.getQuickLink(page).click();
+		if (this.getPageName().getText().toLowerCase().contains(page)) {
+			correct = true;
+		}
+
+		return correct;
+	}
+
+	public boolean checkSignInPage() {
+		return this.getLogInBtn().isDisplayed();
 	}
 
 	public static int verifyURLStatus(String urlString) {
