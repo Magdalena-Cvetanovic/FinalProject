@@ -3,9 +3,9 @@ package tests;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -39,39 +39,41 @@ public class CartTest {
 
 	}
 
-	@Test(priority=1)
-	public void fillTheCartTest() throws InterruptedException {
+	@Test(priority = 1)
+	public void addAllProductsToCartTest() throws InterruptedException {
 
 		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
 		ExcelUtils.setWorkSheet(0);
-		
+
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
+
 		CartPage cp = new CartPage(driver, locators, waiter);
+		// add items from the table to the cart
 		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			String link = ExcelUtils.getDataAt(i, 1);
 			this.driver.navigate().to(link);
 			sip.clickAddToCartBtn();
 		}
-		cp.areAllItemsAdded();
+		// check if all the items were added to the cart
+		sa.assertTrue(cp.areAllItemsAdded());
 		sa.assertAll();
 	}
-//	@Test(priority=2)
-//	public void clearTheCookiesTest() throws InterruptedException {
-//		CartPage cp = new CartPage(driver, locators, waiter);
-//		cp.goToTheCart();
-//		driver.manage().deleteAllCookies();
-//		driver.navigate().refresh();
-//	
-//	
-//		Assert.assertTrue(cp.isTheCartEmpty());
-//	}
-	@Test(priority=3)
-	public void checkTheTotalPriceTest() throws InterruptedException {
-		CartPage cp = new CartPage(driver, locators, waiter);
-//		cp.isThePriceRight();
-	}
-	
 
+	@Test(priority = 3)
+	public void clearTheCookiesTest() throws InterruptedException {
+		CartPage cp = new CartPage(driver, locators, waiter);
+		cp.goToTheCart();
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+
+		Assert.assertTrue(cp.isTheCartEmpty());
+	}
+
+	@Test(priority = 2)
+	public void checkTheTotalPriceTest() throws InterruptedException, ParseException {
+		CartPage cp = new CartPage(driver, locators, waiter);
+		Assert.assertTrue(cp.isThePriceRight());
+	}
 
 	@AfterClass
 	public void afterClass() {
