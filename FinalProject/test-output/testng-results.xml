@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67223" started-at="2020-03-31T21:28:57Z" finished-at="2020-03-31T21:30:05Z">
+  <suite name="Default suite" duration-ms="18124" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67223" started-at="2020-03-31T21:28:57Z" finished-at="2020-03-31T21:30:05Z">
-      <class name="tests.SignInTest$RegistrationTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SignInTest$RegistrationTest@523884b2]" name="setup" is-config="true" duration-ms="6798" started-at="2020-03-31T21:28:57Z" finished-at="2020-03-31T21:29:04Z">
+    <test name="Default test" duration-ms="18124" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:53Z">
+      <class name="tests.PetStoreMenuTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="setup" is-config="true" duration-ms="6840" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.SignInTest$RegistrationTest@523884b2]" name="logInTest" duration-ms="58280" started-at="2020-03-31T21:29:04Z" finished-at="2020-03-31T21:30:02Z">
+        <test-method status="PASS" signature="PageNavigationTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="PageNavigationTest" duration-ms="4295" started-at="2020-03-31T22:56:42Z" finished-at="2020-03-31T22:56:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logInTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInTest$RegistrationTest@523884b2]" name="afterClass" is-config="true" duration-ms="2110" started-at="2020-03-31T21:30:02Z" finished-at="2020-03-31T21:30:05Z">
+        </test-method> <!-- PageNavigationTest -->
+        <test-method status="PASS" signature="SignInLinkTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="SignInLinkTest" duration-ms="415" started-at="2020-03-31T22:56:46Z" finished-at="2020-03-31T22:56:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInLinkTest -->
+        <test-method status="PASS" signature="areLinksAreFunctionalTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="areLinksAreFunctionalTest" duration-ms="4474" started-at="2020-03-31T22:56:47Z" finished-at="2020-03-31T22:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areLinksAreFunctionalTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="afterClass" is-config="true" duration-ms="2063" started-at="2020-03-31T22:56:51Z" finished-at="2020-03-31T22:56:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.SignInTest$RegistrationTest -->
+      </class> <!-- tests.PetStoreMenuTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
