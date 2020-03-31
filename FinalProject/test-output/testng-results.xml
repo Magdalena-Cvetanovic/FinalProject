@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="67267" started-at="2020-03-30T16:57:05Z" finished-at="2020-03-30T16:58:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="67267" started-at="2020-03-30T16:57:05Z" finished-at="2020-03-30T16:58:13Z">
+      <class name="tests.RegistrationTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.RegistrationTest@4501b7af]" name="setup" is-config="true" duration-ms="5236" started-at="2020-03-30T16:57:05Z" finished-at="2020-03-30T16:57:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.RegistrationTest@4501b7af]" name="logInTest" duration-ms="61928" started-at="2020-03-30T16:57:11Z" finished-at="2020-03-30T16:58:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationTest@4501b7af]" name="afterClass" is-config="true" duration-ms="80" started-at="2020-03-30T16:58:13Z" finished-at="2020-03-30T16:58:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.RegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
