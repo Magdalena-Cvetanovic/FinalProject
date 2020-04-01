@@ -38,7 +38,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getUserId() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("userId")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("user_id")));
 	}
 
 	public void setUserName(String userid) {
@@ -47,7 +47,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getNewPass() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("newPass")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("new_pass")));
 	}
 
 	public void setNewPass(String pass) {
@@ -56,7 +56,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getRepeatPass() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("repeatPass")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("repeat_pass")));
 	}
 
 	public void setRepeatPass(String pass) {
@@ -188,7 +188,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getMyList() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("enableList")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("enable_list")));
 	}
 
 	public void clickMyList() {
@@ -196,7 +196,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getMyBanner() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("enableBanner")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("enable_banner")));
 	}
 
 	public void clickMyBanner() {
@@ -204,7 +204,7 @@ public class RegistrationPage extends BasicPage {
 	}
 
 	public WebElement getSaveBtn() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("saveBtn")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("save_btn")));
 	}
 
 	public void clickSaveBtn() {

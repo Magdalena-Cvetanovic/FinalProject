@@ -40,7 +40,7 @@ public class SignInPage extends BasicPage {
 	}
 
 	public WebElement getLoginBtn() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("loginBtn")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("login_btn")));
 	}
 
 	public void clickLogin() {
@@ -48,7 +48,7 @@ public class SignInPage extends BasicPage {
 	}
 
 	public WebElement getSignOut() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("signOut")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("sign_out")));
 	}
 
 	public void clickSignOut() {
@@ -56,7 +56,7 @@ public class SignInPage extends BasicPage {
 	}
 
 	public WebElement getMyAccount() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("myAccount")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("my_account")));
 	}
 
 	public void logIn(String username, String password) {

@@ -39,7 +39,7 @@ public class SignInTest {
 
 		@Test
 		public void logInTest() throws InterruptedException {
-			driver.navigate().to(this.locators.getProperty("signInLink"));
+			driver.navigate().to(this.locators.getProperty("sign_in_page_url"));
 			ExcelUtils.setExcell(this.locators.getProperty("data_source"));
 			ExcelUtils.setWorkSheet(1);
 			SignInPage sip = new SignInPage(driver, locators, waiter);
@@ -49,7 +49,7 @@ public class SignInTest {
 				sip.logIn(id, pass);
 				sa.assertTrue(sip.successfulLogIn());
 				sip.clickSignOut();
-				driver.navigate().to(this.locators.getProperty("signInLink"));
+				driver.navigate().to(this.locators.getProperty("sign_in_page_url"));
 			}
 			sa.assertAll();
 		}

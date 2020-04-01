@@ -57,7 +57,7 @@ public class PetStoreMenuTest {
 		Assert.assertTrue(psmp.clickOnQuickLink("fish"));
 		driver.navigate().back();
 		Assert.assertTrue(psmp.clickOnPicLInk("fish"));
-
+	
 	}
 
 	@Test

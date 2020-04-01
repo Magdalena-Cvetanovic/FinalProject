@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18124" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:53Z">
+  <suite name="Default suite" duration-ms="12225" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18124" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:53Z">
-      <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="setup" is-config="true" duration-ms="6840" started-at="2020-03-31T22:56:35Z" finished-at="2020-03-31T22:56:42Z">
+    <test name="Default test" duration-ms="12225" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:40Z">
+      <class name="tests.CartTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartTest@4501b7af]" name="setup" is-config="true" duration-ms="4957" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="PageNavigationTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="PageNavigationTest" duration-ms="4295" started-at="2020-03-31T22:56:42Z" finished-at="2020-03-31T22:56:46Z">
+        <test-method status="PASS" signature="addAllProductsToCartTest()[pri:1, instance:tests.CartTest@4501b7af]" name="addAllProductsToCartTest" duration-ms="6197" started-at="2020-04-01T14:44:33Z" finished-at="2020-04-01T14:44:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PageNavigationTest -->
-        <test-method status="PASS" signature="SignInLinkTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="SignInLinkTest" duration-ms="415" started-at="2020-03-31T22:56:46Z" finished-at="2020-03-31T22:56:47Z">
+        </test-method> <!-- addAllProductsToCartTest -->
+        <test-method status="PASS" signature="checkTheTotalPriceTest()[pri:2, instance:tests.CartTest@4501b7af]" name="checkTheTotalPriceTest" duration-ms="520" started-at="2020-04-01T14:44:39Z" finished-at="2020-04-01T14:44:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SignInLinkTest -->
-        <test-method status="PASS" signature="areLinksAreFunctionalTest()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="areLinksAreFunctionalTest" duration-ms="4474" started-at="2020-03-31T22:56:47Z" finished-at="2020-03-31T22:56:51Z">
+        </test-method> <!-- checkTheTotalPriceTest -->
+        <test-method status="PASS" signature="clearTheCookiesTest()[pri:3, instance:tests.CartTest@4501b7af]" name="clearTheCookiesTest" duration-ms="465" started-at="2020-04-01T14:44:40Z" finished-at="2020-04-01T14:44:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areLinksAreFunctionalTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@4501b7af]" name="afterClass" is-config="true" duration-ms="2063" started-at="2020-03-31T22:56:51Z" finished-at="2020-03-31T22:56:53Z">
+        </test-method> <!-- clearTheCookiesTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartTest@4501b7af]" name="afterClass" is-config="true" duration-ms="53" started-at="2020-04-01T14:44:40Z" finished-at="2020-04-01T14:44:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.PetStoreMenuTest -->
+      </class> <!-- tests.CartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
