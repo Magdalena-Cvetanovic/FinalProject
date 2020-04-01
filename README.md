@@ -16,7 +16,7 @@ Used libraries:
 - Selenium portable framework for testing web applications
 - Apache POI library for manipulating various file formats
 
-JavaDoc is located in `doc` folder.
+JavaDoc is located in `data` folder.
 
 #### The following website functionalities are tested:
 
