@@ -44,7 +44,7 @@ public class RegistrationTest {
 		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
 		ExcelUtils.setWorkSheet(1);
 		ExcelUtils.setRandomUserId();
-		
+
 		RegistrationPage rp = new RegistrationPage(driver, locators, waiter);
 		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			rp.goToRegistration();
@@ -61,28 +61,71 @@ public class RegistrationTest {
 			String state = ExcelUtils.getDataAt(i, 9);
 			String zip = ExcelUtils.getDataAt(i, 10);
 			String country = ExcelUtils.getDataAt(i, 11);
-			rp.fillOutRegistration(id, pass, repeatPass, firstName, lastName, email, phone, addr1, addr2, city, state, zip, country);
+			rp.fillOutRegistration(id, pass, repeatPass, firstName, lastName, email, phone, addr1, addr2, city, state,
+					zip, country);
 			sa.assertTrue(rp.isRegistrationSuccessful());
 		}
-		
+
 		sa.assertAll();
 	}
-	@Test
-	public void logInTest() throws InterruptedException {
-		driver.navigate().to(this.locators.getProperty("signInLink"));
-		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
-		ExcelUtils.setWorkSheet(1);
-		SignInPage sip = new SignInPage(driver, locators, waiter);
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
-			String id = ExcelUtils.getDataAt(i, 0);
-			String pass = ExcelUtils.getDataAt(i, 1);
-			sip.logIn(id, pass);
-			sa.assertTrue(sip.successfulLogIn());
-			sip.clickSignOut();
-			driver.navigate().to(this.locators.getProperty("signInLink"));
-	}
-		sa.assertAll();
-}
+
+	// test to see if the registration is possible without repeat password input
+//	@Test
+//	public void incompleteRegistration1Test() throws InterruptedException {
+//		driver.navigate().to(this.locators.getProperty("registration_url"));
+//		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
+//		ExcelUtils.setWorkSheet(1);
+//		ExcelUtils.setRandomUserId();
+//		
+//		RegistrationPage rp = new RegistrationPage(driver, locators, waiter);
+//		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+//			rp.goToRegistration();
+//			String id = ExcelUtils.getDataAt(i, 0);
+//			String pass = ExcelUtils.getDataAt(i, 1);
+//			String firstName = ExcelUtils.getDataAt(i, 2);
+//			String lastName = ExcelUtils.getDataAt(i, 3);
+//			String email = ExcelUtils.getDataAt(i, 4);
+//			String phone = ExcelUtils.getDataAt(i, 5);
+//			String addr1 = ExcelUtils.getDataAt(i, 6);
+//			String addr2 = ExcelUtils.getDataAt(i, 7);
+//			String city = ExcelUtils.getDataAt(i, 8);
+//			String state = ExcelUtils.getDataAt(i, 9);
+//			String zip = ExcelUtils.getDataAt(i, 10);
+//			String country = ExcelUtils.getDataAt(i, 11);
+//			rp.fillRegistrationIncompletely1(id, pass,firstName, lastName, email, phone, addr1, addr2, city, state, zip, country);
+//			sa.assertFalse(rp.isRegistrationSuccessful());
+//		}
+//		
+//		sa.assertAll();
+//	}
+	// test to see if the registration is possible without the last name input
+//	@Test
+//	public void incompleteRegistration2Test() throws InterruptedException {
+//		driver.navigate().to(this.locators.getProperty("registration_url"));
+//		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
+//		ExcelUtils.setWorkSheet(1);
+//		ExcelUtils.setRandomUserId();
+//		
+//		RegistrationPage rp = new RegistrationPage(driver, locators, waiter);
+//		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+//			rp.goToRegistration();
+//			String id = ExcelUtils.getDataAt(i, 0);
+//			String pass = ExcelUtils.getDataAt(i, 1);
+//			String firstName = ExcelUtils.getDataAt(i, 2);
+//			String email = ExcelUtils.getDataAt(i, 4);
+//			String phone = ExcelUtils.getDataAt(i, 5);
+//			String addr1 = ExcelUtils.getDataAt(i, 6);
+//			String addr2 = ExcelUtils.getDataAt(i, 7);
+//			String city = ExcelUtils.getDataAt(i, 8);
+//			String state = ExcelUtils.getDataAt(i, 9);
+//			String zip = ExcelUtils.getDataAt(i, 10);
+//			String country = ExcelUtils.getDataAt(i, 11);
+//			rp.fillRegistrationIncompletely2(id, pass,firstName, email, phone, addr1,addr2, city, state, zip, country);
+//			sa.assertFalse(rp.isRegistrationSuccessful());
+//		}
+//		
+//		sa.assertAll();
+//	}
 	@AfterClass
 	public void afterClass() {
 		this.driver.close();
