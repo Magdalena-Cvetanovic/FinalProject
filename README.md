@@ -29,10 +29,11 @@ The following website functionalities are tested:
 
 
 ## This project contains 3 packages:
-pages
-tests
-utils
-All packages are in the src folder.
+- pages
+- tests
+- utils
+
+All packages are in the *src* folder.
 
 ###### Package **pages** contains 7 classes:
 - BasicPage
