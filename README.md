@@ -57,5 +57,5 @@ All packages are in the `src` folder.
 ## Package `utils` contains 1 class:
 - ExcelUtils
 
-## Folder **data** contains 1 file:
+## Folder `data` contains 1 file:
 - pet-store-data - document used for testing registration, login, and cart
