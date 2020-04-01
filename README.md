@@ -1,6 +1,6 @@
 # FinalProject
 
-## The FinalProject is used for testing functionalities
+### The FinalProject is used for testing functionalities
 
 Target application URL is: https://petstore.octoperf.com/
 Target browser: Chrome
