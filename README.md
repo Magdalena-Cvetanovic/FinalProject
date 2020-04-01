@@ -18,7 +18,7 @@ Used libraries:
 
 JavaDoc is located in `doc` folder.
 
-The following website functionalities are tested:
+#### The following website functionalities are tested:
 
 - click link to enter the store
 - functionality of the links(checking if all links are working)
