@@ -1,6 +1,6 @@
-#FinalProject
+# FinalProject
 
-##The FinalProject is used for testing functionalities
+## The FinalProject is used for testing functionalities
 Target application URL is: https://petstore.octoperf.com/
 Target browser: Chrome
 Browser version: Version 80.0.3987.149 (Official Build) (64-bit)
@@ -9,9 +9,9 @@ Run test suite: *testng.xml* Total tests run: 11
 
 Used libraries:
 
--TestNG automation testing framework
--Selenium portable framework for testing web applications
--Apache POI library for manipulating various file formats
+- TestNG automation testing framework
+- Selenium portable framework for testing web applications
+- Apache POI library for manipulating various file formats
 
 JavaDoc is located in *doc* folder.
 
