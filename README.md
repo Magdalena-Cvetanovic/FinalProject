@@ -28,13 +28,13 @@ The following website functionalities are tested:
 - deleting cookies
 
 
-##This project contains 3 packages:
+## This project contains 3 packages:
 pages
 tests
 utils
 All packages are in the src folder.
 
-######Package **pages** contains 7 classes:
+###### Package **pages** contains 7 classes:
 - BasicPage
 - CartPage
 - HomePage
@@ -44,15 +44,15 @@ All packages are in the src folder.
 - StoreItemPage
 
 
-######Package **tests** contains 5 classes:
+###### Package **tests** contains 5 classes:
 - CartTest
 - EnterTheStoreTest
 - PetStoreMenuPage
 - RegistrationTest
 - SignInTest
 
-Package **utils** contains 1 class:
+###### Package **utils** contains 1 class:
 - ExcelUtils
 
-Folder **data** contains 1 file:
+###### Folder **data** contains 1 file:
 - pet-store-data - document used for testing registration, login and adding items to cart
