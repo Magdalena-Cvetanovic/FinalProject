@@ -47,7 +47,7 @@ All packages are in the `src` folder.
 - StoreItemPage
 
 
-### Package **tests** contains 5 classes:
+## Package **tests** contains 5 classes:
 - CartTest
 - EnterTheStoreTest
 - PetStoreMenuPage
