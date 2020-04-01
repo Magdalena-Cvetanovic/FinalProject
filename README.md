@@ -1,6 +1,7 @@
 # FinalProject
 
 ## The FinalProject is used for testing functionalities
+
 Target application URL is: https://petstore.octoperf.com/
 Target browser: Chrome
 Browser version: Version 80.0.3987.149 (Official Build) (64-bit)
