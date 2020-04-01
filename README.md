@@ -22,7 +22,7 @@ The following website functionalities are tested:
 - functionality of the links(checking if all links are working)
 - pet store menu navigational links(left, quick and picture links)
 - registration
-- log in
+- login
 - adding the items to cart
 - checking the item price with the total price
 - deleting cookies
