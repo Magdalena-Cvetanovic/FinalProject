@@ -2,7 +2,6 @@ package pages;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.List;
@@ -13,7 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utils.ExcelUtils;
 
 public class CartPage extends BasicPage {
 
@@ -57,14 +55,11 @@ public class CartPage extends BasicPage {
 		totalCost = bd.doubleValue();
 		return totalCost;
 	}
-	public boolean areAllItemsAdded() {
+	public boolean isTheItemAdded(int j, String id) {
 		List<WebElement> items = this.getShoppingCart();
-		ExcelUtils.setExcell(this.locators.getProperty("data_source"));
-		ExcelUtils.setWorkSheet(0);
 		boolean correct = false;
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+		for (int i = j; i < items.size() - 1; i++) {
 			String item = items.get(i).findElement(By.xpath(this.locators.getProperty("item_id"))).getText();
-			String id = ExcelUtils.getDataAt(i, 0);
 			if (item.contains(id)) {
 				correct = true;
 			}
