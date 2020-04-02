@@ -8,7 +8,7 @@ Target browser: Chrome
 
 Browser version: Version 80.0.3987.149 (Official Build) (64-bit)
 
-Run test suite: ` testng.xml` Total tests run: 11
+Run test suite: ` testng.xml` Total tests run: `11`
 
 Used libraries:
 
