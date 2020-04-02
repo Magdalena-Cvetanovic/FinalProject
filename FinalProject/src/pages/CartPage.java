@@ -12,7 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class CartPage extends BasicPage {
 
 	public CartPage(WebDriver driver, Properties locators, WebDriverWait waiter) {
@@ -34,6 +33,7 @@ public class CartPage extends BasicPage {
 	public WebElement getEmptyCartMessage() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("empty_cart")));
 	}
+
 	public double getSubTotalCost() throws ParseException {
 		String items = driver.findElement(By.xpath(locators.getProperty("sub_total"))).getText();
 		String numbers = items.substring(Math.max(0, items.length() - 6));
@@ -55,9 +55,10 @@ public class CartPage extends BasicPage {
 		totalCost = bd.doubleValue();
 		return totalCost;
 	}
+
 	public boolean isTheItemAdded(int j, String id) {
-		List<WebElement> items = this.getShoppingCart();
 		boolean correct = false;
+		List<WebElement> items = this.getShoppingCart();
 		for (int i = j; i < items.size() - 1; i++) {
 			String item = items.get(i).findElement(By.xpath(this.locators.getProperty("item_id"))).getText();
 			if (item.contains(id)) {

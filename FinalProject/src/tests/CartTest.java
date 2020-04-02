@@ -20,7 +20,6 @@ import pages.CartPage;
 import pages.StoreItemPage;
 import utils.ExcelUtils;
 
-
 public class CartTest {
 	private WebDriver driver;
 	private Properties locators;
@@ -56,9 +55,9 @@ public class CartTest {
 			sip.clickAddToCartBtn();
 			String id = ExcelUtils.getDataAt(i, 0);
 			sa.assertTrue(cp.isTheItemAdded(i, id));
+			sa.assertTrue(cp.isTheItemAdded(i, id));
 		}
 
-	;
 		sa.assertAll();
 	}
 

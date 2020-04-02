@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12225" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:40Z">
+  <suite name="Default suite" duration-ms="22351" started-at="2020-04-02T20:40:46Z" finished-at="2020-04-02T20:41:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12225" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:40Z">
+    <test name="Default test" duration-ms="22351" started-at="2020-04-02T20:40:46Z" finished-at="2020-04-02T20:41:09Z">
       <class name="tests.CartTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartTest@4501b7af]" name="setup" is-config="true" duration-ms="4957" started-at="2020-04-01T14:44:28Z" finished-at="2020-04-01T14:44:33Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartTest@4501b7af]" name="setup" is-config="true" duration-ms="7534" started-at="2020-04-02T20:40:46Z" finished-at="2020-04-02T20:40:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addAllProductsToCartTest()[pri:1, instance:tests.CartTest@4501b7af]" name="addAllProductsToCartTest" duration-ms="6197" started-at="2020-04-01T14:44:33Z" finished-at="2020-04-01T14:44:39Z">
+        <test-method status="PASS" signature="addAllProductsToCartTest()[pri:1, instance:tests.CartTest@4501b7af]" name="addAllProductsToCartTest" duration-ms="13564" started-at="2020-04-02T20:40:54Z" finished-at="2020-04-02T20:41:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAllProductsToCartTest -->
-        <test-method status="PASS" signature="checkTheTotalPriceTest()[pri:2, instance:tests.CartTest@4501b7af]" name="checkTheTotalPriceTest" duration-ms="520" started-at="2020-04-01T14:44:39Z" finished-at="2020-04-01T14:44:40Z">
+        <test-method status="PASS" signature="checkTheTotalPriceTest()[pri:2, instance:tests.CartTest@4501b7af]" name="checkTheTotalPriceTest" duration-ms="528" started-at="2020-04-02T20:41:07Z" finished-at="2020-04-02T20:41:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTheTotalPriceTest -->
-        <test-method status="PASS" signature="clearTheCookiesTest()[pri:3, instance:tests.CartTest@4501b7af]" name="clearTheCookiesTest" duration-ms="465" started-at="2020-04-01T14:44:40Z" finished-at="2020-04-01T14:44:40Z">
+        <test-method status="PASS" signature="clearTheCookiesTest()[pri:3, instance:tests.CartTest@4501b7af]" name="clearTheCookiesTest" duration-ms="515" started-at="2020-04-02T20:41:08Z" finished-at="2020-04-02T20:41:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearTheCookiesTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartTest@4501b7af]" name="afterClass" is-config="true" duration-ms="53" started-at="2020-04-01T14:44:40Z" finished-at="2020-04-01T14:44:40Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartTest@4501b7af]" name="afterClass" is-config="true" duration-ms="173" started-at="2020-04-02T20:41:08Z" finished-at="2020-04-02T20:41:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
